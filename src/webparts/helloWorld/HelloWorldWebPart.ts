@@ -32,24 +32,11 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
   }
 
   public async render(): Promise<void> {
-    // Setup the options with header and body
-    const headers: Headers = new Headers();
-    headers.append("Content-type", "application/json");
-
-    const postOptions: IHttpClientOptions = {
-      headers: headers,
-      body: '{ "site": "<SiteName>"}'
-    };
-
-
-    const result = await this.client
-      .post('https://<FunctionApp>.azurewebsites.net/api/PnPNewInvite', AadHttpClient.configurations.v1, postOptions).then((res: HttpClientResponse): Promise<any> => {
-        return res.json();
-      });
     const element: React.ReactElement<IHelloWorldProps> = React.createElement(
       HelloWorld,
       {
-        lists: result,
+        description: this.properties.description,
+        client: this.client,
       }
     );
 

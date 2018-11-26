@@ -1,3 +1,6 @@
+import { AadHttpClient } from "@microsoft/sp-http";
+
 export interface IHelloWorldProps {
-  lists: any;
+  description: string;
+  client: AadHttpClient;
 }

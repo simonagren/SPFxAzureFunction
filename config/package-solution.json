@@ -9,7 +9,7 @@
     "isDomainIsolated": false,
     "webApiPermissionRequests": [
       {
-        "resource": "newugdemosimon",
+        "resource": "<ResourceName>",
         "scope": "user_impersonation"
       }
     ]
