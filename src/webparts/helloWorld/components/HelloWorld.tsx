@@ -83,7 +83,7 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, IHello
     };
 
     const result: any = await this.props.client
-      .post('https://<functionapp>.azurewebsites.net/api/PnPNewInvite', AadHttpClient.configurations.v1, postOptions).then((res: HttpClientResponse): Promise<any> => {
+      .post('https://pnptesting.azurewebsites.net/api/PnPNewInvite', AadHttpClient.configurations.v1, postOptions).then((res: HttpClientResponse): Promise<any> => {
         this.setState({
           isLoading: false
         });

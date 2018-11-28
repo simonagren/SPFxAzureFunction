@@ -17,5 +17,5 @@ npm i
 ```bash
 gulp bundle --ship && gulp package-solution --ship
 ```
-- Upload to ypu app catalog and deploy
+- Upload to yor app catalog and deploy
 - Add HelloWorld web part to one of your pages.
